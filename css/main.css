@@ -1,5 +1,4 @@
 header {
-  font-family: Nanum Myeongjo;
   grid-area: sidebar;
   grid-template-areas:
   "logo"
@@ -17,12 +16,14 @@ body {
   grid-template-areas:
     ". sidebar content ."
     ". sidebar content ."
-    ". foot content ."
+    ". footer content ."
 }
 
 .logo-area {
+  font-family: Nanum Myeongjo;
   font-size: 80px;
   margin: auto;
+  margin-top: 30px;
   text-align: center;
   grid-area: logo;
   /* justify-self: center; */
@@ -31,6 +32,8 @@ body {
 
 #nav-primary {
   grid-area: navbar;
+  font-family: Open Sans;
+  font-weight: 300;
 }
 
 #nav-primary .navigation-list {
@@ -60,7 +63,10 @@ a:hover {
 }
 
 footer {
-  grid-area: foot;
+  font-family: Open Sans;
+  font-size: 12px;
+  font-weight: 300;
+  grid-area: footer;
   justify-self: center;
   margin: auto;
   /* background: pink; */
