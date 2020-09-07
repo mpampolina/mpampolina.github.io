@@ -1,4 +1,5 @@
 name: Miguel Pampolina
 markdown: kramdown
 pygments: true
-baseurl: /mpampolina.github.io
+# baseurl: /mpampolina.github.io
+# ^ use baseurl only if on a project repository (i.e. not directly associated with github profile)
