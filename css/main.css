@@ -1,0 +1,72 @@
+header {
+  font-family: Nanum Myeongjo;
+  grid-area: sidebar;
+  grid-template-areas:
+  "logo"
+  "navbar";
+}
+
+body {
+  margin: 0px;
+  display: grid;
+  width: 100%;
+  height: 95vh;
+  grid-template-columns: 40px 1fr 5fr 40px;
+  grid-template-rows: auto auto 80px;
+  grid-gap: 10px;
+  grid-template-areas:
+    ". sidebar content ."
+    ". sidebar content ."
+    ". foot content ."
+}
+
+.logo-area {
+  font-size: 80px;
+  margin: auto;
+  text-align: center;
+  grid-area: logo;
+  /* justify-self: center; */
+  /* background: green; */
+}
+
+#nav-primary {
+  grid-area: navbar;
+}
+
+#nav-primary .navigation-list {
+  /* background: pink; */
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: grey;
+}
+
+.content {
+  grid-area: content;
+}
+
+.home-image {
+  background-image: url(../images/landing.jpg);
+  width: 100%;
+  height: 95vh;
+  background-position: center;
+  background-size: cover;
+}
+
+footer {
+  grid-area: foot;
+  justify-self: center;
+  margin: auto;
+  /* background: pink; */
+}
+
+footer .links-ext {
+  /* background: turquoise; */
+  text-align: center;
+}
