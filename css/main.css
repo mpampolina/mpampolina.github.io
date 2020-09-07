@@ -52,6 +52,12 @@ a:hover {
 
 .content {
   grid-area: content;
+  font-family: Open Sans;
+  font-weight: 300;
+}
+
+.content h1 {
+  font-family: Nanum Myeongjo;
 }
 
 .home-image {

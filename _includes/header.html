@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{{ page.title }}</title>
+
+    {% if page.url == "/" %}
+      <title>miguel pampolina</title>
+    {% else %}
+      <title>miguel pampolina - {{ page.title }}</title>
+    {% endif %}
+
     <!-- link to main stylesheet -->
     <link rel="stylesheet" type=text/css href="{{ site.baseurl }}/css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}/favicon.ico">
   </head>
+
   <body>
     <header>
+
     <div class="logo-area">
-      <a href="#">M.</a>
+      <a href="{{ site.baseurl }}/">M.</a>
     </div>
+
     <nav id="nav-primary">
       <ul class="navigation-list">
-        <li><a href="#">home</a></li>
-        <li><a href="#">photographs</a></li>
+        <li><a href="{{ site.baseurl }}/">home</a></li>
+        <li><a href="{{ site.baseurl }}/photographs">photographs</a></li>
         <li><a href="#">portfolio</a></li>
-        <li><a href="#">about</a></li>
+        <li><a href="{{ site.baseurl }}/contact">contact</a></li>
       </ul>
     </nav>
+
     </header>
