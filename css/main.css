@@ -90,19 +90,54 @@ a:hover {
 }
 
 .pano-img {
-  display: grid;
-  grid-template-areas:
-  "images";
+  display: flexbox;
+  flex-wrap: wrap;
   justify-items: center;
 }
 
-.image {
-  grid-area: images;
+.image-xpan {
   width: 80%;
-  height: 400px;
+  height: 0px;
+  margin: auto;
+  /* padding: 20vh 0px 20vh 0px; */
+  padding-top: 29.55%;
+  padding-bottom: 40vh;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+.image-three-two {
+  width: 80%;
+  height: 0px;
+  margin: auto;
+  /* padding: 20vh 0px 20vh 0px; */
+  padding-top: 53.34%;
+  padding-bottom: 40vh;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.image-sixteen-nine {
+  width: 80%;
+  height: 0px;
+  margin: auto;
+  /* padding: 20vh 0px 20vh 0px; */
+  padding-top: 45%;
+  padding-bottom: 40vh;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+.location-mention {
+  margin: auto;
+  text-align: center;
+  padding-bottom: 5vh;
+  font-weight: 300px;
+  font-size: 14px;
 }
 
 footer {
