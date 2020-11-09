@@ -1,158 +1,117 @@
-header {
-  position: fixed;
-  display: grid;
-  width: 16vw;
-  grid-template-areas:
-  "logo"
-  "navbar";
-  /* background: pink; */
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&family=Open+Sans:wght@300;400&display=swap");
+
+:root {
+  --left-segment-width: 16vw;
+  --middle-segment-width: 80vw;
+  --right-segment-width: 4vw;
+  --content-height: 95vh;
+  --kinda-grey: #aba499;
+  --near-black: #202324;
 }
 
-body {
+* {
+  box-sizing: border-box;
+  padding: 0px;
   margin: 0px;
-  display: grid;
-  width: 100%;
-  height: 95vh;
-  grid-template-columns: 16vw 80vw 4vw;
-  grid-template-rows: auto auto 80px;
-  gap: 10px 10px;
-  grid-template-areas:
-    ". content ."
-    ". content ."
-    ". content ."
+}
+
+/* SIDEBAR-START */
+
+.navbar.flex {
+  position: fixed;
+  height: var(--content-height);
+  width: var(--left-segment-width);
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .logo-area {
-  font-family: Nanum Myeongjo;
+  font-family: "Nanum Myeongjo", sans-serif;
   font-size: 80px;
-  margin-top: 30px;
-  text-align: center;
-  grid-area: logo;
-  justify-self: center;
-  /* background: green; */
+  padding: 15px 0;
 }
 
-#nav-primary {
-  grid-area: navbar;
-  font-family: Open Sans;
-  font-weight: 300;
-  justify-self: start;
-  margin-left: 3vw;
-}
-
-#nav-primary .navigation-list {
-  /* background: pink; */
+nav ul {
+  padding-left: 1rem;
   list-style-type: none;
-  padding: 0px;
 }
 
 a {
   text-decoration: none;
-  color: black;
+  color: var(--kinda-grey);
 }
 
 a:hover {
   color: grey;
 }
 
-.title-acro {
-  font-size: 35px;
+.footer-text {
+  font-size: 12px;
+  text-align: center;
+  /* align the footer to the 
+  bottom of the container */
+  margin-top: auto;
+}
+/* SIDEBAR-END */
+
+/* TITLE-STYLES-START */
+.title-text.flex {
+  justify-content: flex-start;
 }
 
-.content {
-  grid-area: content;
-  font-family: Open Sans;
-  font-weight: 300;
+.content h1 {
+  font-size: 35px;
 }
 
 .content h1,
 .content h2 {
+  margin: 15px 0px;
   font-family: Nanum Myeongjo;
 }
 
-.title-text {
-  display: flex;
-  font-size: 14px;
-  width: 350px;
-  flex-wrap: wrap;
-}
-
-.sml-subtitle {
-  font-size: 20px;
+.title-text .title-sml {
+  font-size: 18px;
   margin-left: 20px;
 }
+/* TITLE-STYLES-END */
+
+/* BODY-START */
+body {
+  width: 100%;
+  display: grid;
+  grid-template-columns: var(--left-segment-width) var(--middle-segment-width) var(
+      --left-segment-width
+    );
+  gap: 0px 10px;
+  grid-template-areas:
+    ". content ."
+    ". content ."
+    ". . .";
+  background-color: var(--near-black);
+  color: var(--kinda-grey);
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
+
+.content {
+  grid-area: content;
+  font-family: 'Open Sans';
+  font-weight: 300;
+}
+/* BODY-END */
 
 .home-image {
   width: 100%;
-  height: 95vh;
+  height: var(--content-height);
   background-position: center;
   background-size: cover;
 }
 
-.pano-img {
-  display: flexbox;
-  flex-wrap: wrap;
-  justify-items: center;
-}
+/* UTLITIES */
 
-.image-xpan {
-  width: 80%;
-  height: 0px;
-  margin: auto;
-  /* padding: 20vh 0px 20vh 0px; */
-  padding-top: 29.55%;
-  padding-bottom: 40vh;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.image-three-two {
-  width: 80%;
-  height: 0px;
-  margin: auto;
-  /* padding: 20vh 0px 20vh 0px; */
-  padding-top: 53.34%;
-  padding-bottom: 40vh;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.image-sixteen-nine {
-  width: 80%;
-  height: 0px;
-  margin: auto;
-  /* padding: 20vh 0px 20vh 0px; */
-  padding-top: 45%;
-  padding-bottom: 40vh;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-
-.location-mention {
-  margin: auto;
-  text-align: center;
-  padding-bottom: 5vh;
-  font-weight: 300px;
-  font-size: 14px;
-}
-
-footer {
-  font-family: Open Sans;
-  font-size: 12px;
-  font-weight: 300;
-  position: fixed;
-  bottom: 5vh;
-  left: 0px;
-  width: 16vw;
-  text-align: center;
-  /* background: pink; */
-}
-
-footer .links-ext {
-  /* background: turquoise; */
-  text-align: center;
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }

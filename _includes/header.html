@@ -1,35 +1,36 @@
 <!DOCTYPE html>
 <html>
   <head>
-
     {% if page.url == "/" %}
-      <title>miguel pampolina</title>
+    <title>miguel pampolina</title>
     {% else %}
-      <title>miguel pampolina - {{ page.title }}</title>
+    <title>miguel pampolina - {{ page.title }}</title>
     {% endif %}
 
     <!-- link to main stylesheet -->
     <link rel="stylesheet" type=text/css href="/css/main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/photographs.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
   </head>
 
   <body>
-    <header>
-
-    <div class="logo-area">
-      <a href="/">M.</a>
+    <div class="navbar flex">
+      <div class="logo-area">
+        <a href="/">M.</a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="/">home</a></li>
+          <li><a href="/portfolio">portfolio</a></li>
+          <li><a href="/photographs">photographs</a></li>
+          <br />
+          <li><a href="/about">about</a></li>
+          <li><a href="/contact">contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer-text">
+        <p>&copy2020 by miguel pampolina.</p>
+        <a href="https://github.com/mpampolina">github</a> / 
+        <a href="https://open.spotify.com/playlist/05jXuUojEIvmq7yS68ZClI">spotify</a>
+      </div>
     </div>
-
-    <nav id="nav-primary">
-      <ul class="navigation-list">
-        <li><a href="/">home</a></li>
-        <li><a href="/portfolio">portfolio</a></li>
-        <li><a href="/photographs">photographs</a></li>
-        <br>
-        <li><a href="/about">about</a></li>
-        <li><a href="/contact">contact</a></li>
-      </ul>
-    </nav>
-
-    </header>
