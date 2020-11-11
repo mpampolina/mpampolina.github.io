@@ -63,17 +63,16 @@ a:hover {
 
 body .footer-text {
   position: fixed;
+  /* Establish height and width values */
+  height: 34px;
   width: 240px;
-  height: 100%;
-  padding: 0px 15px;
-  padding-bottom: 120px;
+  /* Position element 60px from the bottom */
+  bottom: 60px;
   /* Make the contents into a Column */
   flex-direction: column;
-  /* Move the contents to the end of the container */
-  justify-content: flex-end;
+  /* Move the contents to the start of the container */
+  justify-content: flex-start;
   font-size: 12px;
-  /* Wedge between the navbar and the body */
-  z-index: 1;
   color: var(--kinda-grey);
 }
 
