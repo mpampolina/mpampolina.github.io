@@ -15,24 +15,40 @@
   margin: 0px;
 }
 
+/* BODY-START */
+
+body {
+  height: 100vh;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  background-color: var(--near-black);
+  color: var(--kinda-grey);
+}
+
+/* BODY-END*/
+
 /* SIDEBAR-START */
 
 .navbar.flex {
+  height: 100%;
+  width: 240px;
   position: fixed;
-  height: var(--content-height);
-  width: var(--left-segment-width);
+  /* Ensure the sidebar is on top */
+  z-index: 1;
+  background-color: var(--near-black);
   flex-direction: column;
   justify-content: flex-start;
+  padding-bottom: 80px;
 }
 
 .logo-area {
   font-family: "Nanum Myeongjo", sans-serif;
-  font-size: 80px;
-  padding: 15px 0;
+  font-size: 45px;
+  padding: 20px 0;
 }
 
 nav ul {
-  padding-left: 1rem;
+  padding-left: 0.5rem;
   list-style-type: none;
 }
 
@@ -46,17 +62,39 @@ a:hover {
 }
 
 .footer-text {
+  color: var(--kinda-grey);
   font-size: 12px;
   text-align: center;
   /* align the footer to the 
   bottom of the container */
   margin-top: auto;
 }
+
+ .navigation-menu {
+  padding: 5px 5px;
+ }
+
 /* SIDEBAR-END */
 
 /* TITLE-STYLES-START */
 .title-text.flex {
   justify-content: flex-start;
+}
+
+.title-text .title-sml {
+  font-size: 18px;
+  margin-left: 20px;
+}
+
+/* TITLE-STYLES-END */
+
+/* CONTENT-START */
+
+.content {
+  height: 100%;
+  padding: 10px 10px;
+  /* Account for the Sidebar */
+  margin-left: 240px;
 }
 
 .content h1 {
@@ -69,48 +107,37 @@ a:hover {
   font-family: Nanum Myeongjo;
 }
 
-.title-text .title-sml {
-  font-size: 18px;
-  margin-left: 20px;
-}
-/* TITLE-STYLES-END */
+/* CONTENT-END */
 
-/* BODY-START */
-body {
+/* CUSTOM-CONTENT-START */
+
+main .home-image {
+  /* Make the width always strech out
+  to fit the content & sidebar */
   width: 100%;
-  display: grid;
-  grid-template-columns: var(--left-segment-width) var(--middle-segment-width) var(
-      --left-segment-width
-    );
-  gap: 0px 10px;
-  grid-template-areas:
-    ". content ."
-    ". content ."
-    ". . .";
-  background-color: var(--near-black);
-  color: var(--kinda-grey);
-  font-family: "Open Sans", sans-serif;
-  font-weight: 300;
-}
-
-.content {
-  grid-area: content;
-  font-family: 'Open Sans';
-  font-weight: 300;
-}
-/* BODY-END */
-
-.home-image {
-  width: 100%;
-  height: var(--content-height);
+  /* Make the image height responsive */
+  height: 95vh;
   object-fit: cover;
 }
 
-/* UTLITIES */
+/* CUSTOM-CONTENT-END */
 
-.flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+/* BREAKPOINTS */
+
+/* Tablet */
+@media(max-width: 768px) {
+  /* .navbar.flex {
+    position: relative;
+    height: auto;
+    width: auto;
+    flex-direction: row;
+  }
+
+  .body {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 'content';
+  } */
 }
+
+/* Mobile */

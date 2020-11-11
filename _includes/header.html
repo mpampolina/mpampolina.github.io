@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lan="en">
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link to main stylesheet -->
+    <link rel="stylesheet" type=text/css href="/css/main.css">
+    <link rel="stylesheet" href="/css/photographs.css">
+    <link rel="stylesheet" href="/css/utilities.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
     {% if page.url == "/" %}
     <title>miguel pampolina</title>
     {% else %}
     <title>miguel pampolina - {{ page.title }}</title>
     {% endif %}
-
-    <!-- link to main stylesheet -->
-    <link rel="stylesheet" type=text/css href="/css/main.css">
-    <link rel="stylesheet" href="/css/photographs.css">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <script src="main.js" defer></script>
   </head>
 
   <body>
@@ -18,6 +22,7 @@
       <div class="logo-area">
         <a href="/">M.</a>
       </div>
+      <!-- <button class="navigation-menu">menu</button> -->
       <nav>
         <ul>
           <li><a href="/">home</a></li>
