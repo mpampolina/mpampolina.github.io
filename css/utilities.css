@@ -4,3 +4,11 @@
   align-items: center;
   height: 100%;
 }
+
+.btn {
+  background-color: var(--near-black);
+  color: var(--kinda-grey);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  border: solid 1px var(--kinda-grey);
+}
