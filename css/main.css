@@ -62,10 +62,11 @@ a:hover {
 }
 
 body .footer-text {
-  position: absolute;
+  position: fixed;
   width: 240px;
-  bottom: 120px;
-  left: 0px;
+  height: 100%;
+  padding: 0px 15px;
+  padding-bottom: 120px;
   /* Make the contents into a Column */
   flex-direction: column;
   /* Move the contents to the end of the container */
@@ -96,7 +97,7 @@ body .footer-text {
 
 /* CONTENT-START */
 
-.content {
+body .content {
   height: 100%;
   padding: 10px 10px;
   /* Account for the Sidebar */
@@ -145,7 +146,8 @@ main .home-image {
   justify-content: center;
 }
 
-.footer-text {
+body .footer-text {
+  position: relative;
   justify-self: flex-start;
 }
 }
