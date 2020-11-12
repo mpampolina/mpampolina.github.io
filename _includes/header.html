@@ -14,7 +14,7 @@
     {% else %}
     <title>miguel pampolina - {{ page.title }}</title>
     {% endif %}
-    <script src="main.js" defer></script>
+    <script src="/scripts/main.js" defer></script>
   </head>
 
   <body>
@@ -22,8 +22,8 @@
       <div class="logo-area">
         <a href="/">M.</a>
       </div>
-      <!-- <button class="navigation-menu btn">menu</button> -->
-      <nav>
+      <button id="nav-button" class="btn">menu</button>
+      <nav id="menu">
         <ul class="flex">
           <li><a href="/">home</a></li>
           <li><a href="/portfolio">portfolio</a></li>

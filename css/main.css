@@ -76,9 +76,14 @@ body .footer-text {
   color: var(--kinda-grey);
 }
 
- .navigation-menu {
+#nav-button {
   padding: 5px 5px;
- }
+  display: none;
+}
+
+#menu {
+  display: block;
+}
 
 /* SIDEBAR-END */
 
@@ -97,7 +102,7 @@ body .footer-text {
 /* CONTENT-START */
 
 body .content {
-  height: 100%;
+  height: auto;
   padding: 10px 10px;
   /* Account for the Sidebar */
   margin-left: 240px;
@@ -130,25 +135,96 @@ main .home-image {
 
 /* BREAKPOINTS */
 
-/* Tablet */
-@media(max-width: 768px) {
-.navbar.flex {
-  position: relative;
-  flex-direction: row;
-  width: 100%;
-  height: 120px;
-  padding-bottom: 0px;
-}
+/**/
+@media (max-width: 768px) {
+  .navbar.flex {
+    position: relative;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 25px;
+    width: 100%;
+    height: auto;
+  }
 
-.navbar nav ul {
-  flex-direction: row;
-  justify-content: center;
-}
+  .navbar.flex nav ul {
+    flex-direction: row;
+  }
 
-body .footer-text {
-  position: relative;
-  justify-self: flex-start;
-}
+  nav ul li {
+    margin: 10px 2px;
+    padding: 10px;
+  }
+
+  body .content {
+    width: 100%;
+    margin-left: 0px;
+  }
+
+  body .footer-text {
+    position: relative;
+    width: 100%;
+    height: auto;
+    bottom: 0px;
+    padding: 0px 20px 30px 20px;
+  }
 }
 
 /* Mobile */
+@media (max-width: 500px) {
+  .navbar.flex {
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 25px;
+    width: 100%;
+    /* 60px closed and 200px open */
+    height: auto;
+    padding-bottom: 0px;
+  }
+
+  .navbar.flex .logo-area {
+    margin: 0px 20px;
+    padding: 0px 30px;
+  }
+
+  .navbar.flex #nav-button {
+    margin: 0px 40px;
+    padding: 6px 18px;
+    display: block;
+    z-index: 3;
+  }
+
+  #menu {
+    display: none;
+    width: 100%;
+    padding: 10px 40px 5px 40px;
+    border-top: solid 1px var(--kinda-grey);
+  }
+
+  .navbar.flex nav ul {
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .navbar.flex nav ul li {
+    margin: 2px;
+    padding: 0px;
+  }
+
+  body .content {
+    width: 100%;
+    margin-left: 0px;
+  }
+
+  body .footer-text {
+    position: relative;
+    width: 100%;
+    height: auto;
+    bottom: 0px;
+    justify-self: flex-end;
+    align-self: center;
+    padding: 0px 20px 30px 20px;
+  }
+}
